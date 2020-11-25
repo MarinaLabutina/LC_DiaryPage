@@ -19,7 +19,13 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d2b2c62-eda1-4f4d-affe-ad9cd2114048" name="Default Changelist" comment="allure report added">
@@ -68,8 +74,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="14.2.0" />
-    <property name="javascript.nodejs.core.library.typings.version" value="14.14.9" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.14.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.14.0" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -125,6 +131,8 @@
       <list>
         <item itemvalue="Mocha.VERIFY THAT PROFILE PAGE HAS DIARY ELEMENTS.VERIFY THAT PROFILE PAGE HAS DIARY ELEMENTS IN TOP MENU FOR LEARNER" />
         <item itemvalue="Mocha.VERIFY THAT PROFILE PAGE HAS DIARY ELEMENTS" />
+        <item itemvalue="Mocha.VERIFY THAT PROFILE PAGE HAS DIARY ELEMENTS.VERIFY THAT PROFILE PAGE HAS DIARY ELEMENTS IN TOP MENU FOR LEARNER" />
+        <item itemvalue="Mocha.VERIFY THAT PROFILE PAGE HAS DIARY ELEMENTS" />
       </list>
     </recent_temporary>
   </component>
@@ -154,6 +162,7 @@
       <workItem from="1606110892238" duration="434000" />
       <workItem from="1606111664161" duration="630000" />
       <workItem from="1606112818434" duration="7326000" />
+      <workItem from="1606283230882" duration="10616000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore">
       <created>1605771549654</created>
@@ -180,7 +189,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -206,10 +227,14 @@
     </state>
     <state x="421" y="72" key="CommitChangelistDialog2/0.25.1920.966/1920.-13.1920.1055@0.25.1920.966" timestamp="1605776143991" />
     <state x="421" y="72" key="CommitChangelistDialog2/0.25.1920.968/1920.-13.1920.1055@0.25.1920.968" timestamp="1605771549499" />
-    <state width="285" height="366" key="Git.Branch.Popup" timestamp="1606201164381">
+    <state x="111" y="99" width="1736" height="856" key="DiffContextDialog" timestamp="1606296316578">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="285" height="366" key="Git.Branch.Popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606201164381" />
+    <state x="111" y="99" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606296316578" />
+    <state width="297" height="378" key="Git.Branch.Popup" timestamp="1606295998281">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="297" height="378" key="Git.Branch.Popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606295998281" />
     <state width="212" height="289" key="Git.Branch.Popup/0.23.1440.826@0.23.1440.826" timestamp="1606113272839" />
     <state x="836" y="441" width="540" height="198" key="Github.ShareDialog" timestamp="1605771191935">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -262,6 +287,10 @@
     <state x="469" y="176" key="SettingsEditor/0.0.1920.1080/1920.-38.1920.1080@0.0.1920.1080" timestamp="1605771092821" />
     <state x="352" y="127" key="SettingsEditor/0.23.1440.826@0.23.1440.826" timestamp="1606114593322" />
     <state x="352" y="127" key="SettingsEditor/0.23.1440.827@0.23.1440.827" timestamp="1606115762141" />
+    <state x="73" y="248" width="1736" height="856" key="ShowDiffWithBranchDialog" timestamp="1606296316578">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="73" y="248" width="1736" height="856" key="ShowDiffWithBranchDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606296316578" />
     <state x="428" y="243" key="Vcs.Push.Dialog.v2" timestamp="1605771555588">
       <screen x="0" y="25" width="1920" height="968" />
     </state>
@@ -271,6 +300,14 @@
     </state>
     <state x="503" y="366" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.825@0.23.1440.825" timestamp="1606018300360" />
     <state x="503" y="366" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.826@0.23.1440.826" timestamp="1606112825397" />
+    <state x="707" y="92" width="986" height="863" key="dock-window-1" timestamp="1606293189052">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="707" y="92" width="986" height="863" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606293189052" />
+    <state x="740" y="232" key="git4idea.branch.GitSmartOperationDialog" timestamp="1606212416648">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="232" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606212416648" />
     <state x="500" y="341" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1606112505087">
       <screen x="0" y="23" width="1440" height="826" />
     </state>
