@@ -15,7 +15,7 @@ describe('VERIFY THAT PROFILE PAGE HAS DIARY ELEMENTS', () => {
       ProfilePage.createReportBtn.waitForDisplayed();
     });
 
-    it('Verify that diary tab exist in the top menu', () => {
+    it('###Verify that diary tab exist in the top menu', () => {
       expect(ProfilePage.topMenuDiaryLearner.isDisplayed()).toEqual(true);
     });
 
@@ -64,6 +64,18 @@ describe('VERIFY THAT PROFILE PAGE HAS DIARY ELEMENTS', () => {
 
     it('Verify that label Daily reports counter exists on profile page ', () => {
       expect(ProfilePage.dailyReportsCounter.isDisplayed()).toEqual(true);
+    });
+
+    it('Verify that the chart field is present on the page', () => {
+      expect(ProfilePage.chartField.isDisplayed()).toEqual(true);
+    });
+
+    it('Verify that the chart field name is present on the page', () => {
+      expect(ProfilePage.chartFieldName.isDisplayed()).toEqual(true);
+    });
+
+    it('Verify that the chart field name text = "Daily progress"', () => {
+      expect(ProfilePage.chartFieldName.getText().includes(profilePage.chartFieldNameText)).toEqual(true);
     });
 
   });

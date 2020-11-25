@@ -1,12 +1,20 @@
 import BasePage from './Base.page';
 
 class ProfilePage extends BasePage {
-  get topMenuDiary() {
+  get topMenuDiaryAdmin() {
     return $$('.item')[2];
   }
 
   get topMenuDiaryLearner() {
     return $$('.item')[1];
+  }
+
+  get chartField() {
+    return $('.ant-col-offset-4');
+  }
+
+  get chartFieldName() {
+    return $$('h5')[1];
   }
 
   get btnSkip() {
@@ -24,5 +32,6 @@ class ProfilePage extends BasePage {
   get dailyReportsCounter() {
     return $('.ml-2');
   }
+
 }
 export default new ProfilePage();

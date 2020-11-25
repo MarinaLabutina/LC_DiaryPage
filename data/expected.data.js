@@ -1,10 +1,11 @@
-const topMenu = {
+const  topMenu= {
   Diary: 'Diary',
 };
 
 const profilePage = {
   createBtn: 'Create day report',
   dailyReportsLabelText: 'Daily reports',
+  chartFieldNameText: 'Daily progress',
 };
 
 const diaryPage = {
@@ -42,6 +43,7 @@ const digits = {
   zero: 0,
   ten: 10,
   zeroText: '0',
+  digit: null,
 };
 
 module.exports = { topMenu, profilePage, diaryPage, digits, drawerMenu };
