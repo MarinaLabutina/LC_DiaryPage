@@ -1,7 +1,7 @@
 import BasePage from './Base.page';
 
 class ProfilePage extends BasePage {
-  get topMenuDiaryAdmin() {
+  get topMenuDiary() {
     return $$('.item')[2];
   }
 

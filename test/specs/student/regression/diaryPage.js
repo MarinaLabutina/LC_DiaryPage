@@ -107,7 +107,8 @@ describe('VERIFY THAT DIARY PAGE FOR STUDENT ROLE', () => {
 
     it('TC-91 Verify that if you click on 3 dots in the last report pop up shows list of 3 btns: Approve, Edit and Delete" ', function () {
       DiaryPage.btn3Dots.moveTo();
-      browser.pause(WaitTimes.WAIT_TIME_SHORT);
+      //browser.pause(WaitTimes.WAIT_TIME_SHORT);
+      $('.ant-dropdown-menu-vertical').waitForDisplayed();
       expect(DiaryPage.getValueOfArray(DiaryPage.btn3dotsArray)).toEqual(diaryPage.array3dots);
     });
 
