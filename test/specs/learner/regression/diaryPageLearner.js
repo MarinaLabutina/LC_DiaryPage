@@ -36,9 +36,55 @@ describe('VERIFY THAT DIARY PAGE FOR LEARNER', () => {
            expect(DiaryPage.statTotalDiariesCount.getValue()).not.toEqual(digits.zero);
         });
 
+
+
+        it('Verify that Diary page has "Today Daily Reports', () => {
+            expect(DiaryPage.statTodayDailyReport.getText()).toEqual(diaryPage.statTodayDailyReport);
+        });
+
+        it('Verify that Diary page "Today Daily Reports" field has quantity', () => {
+            expect(DiaryPage.statTodayDailyReport.isDisplayed()).toEqual(true);
+        });
+
+        it('Verify that Diary page "Today Daily Reports" field quantity != 0', () => {
+            expect(DiaryPage.statTodayDailyReportCount.getText()).toEqual(digits.zeroText);
+        });
+
+
+
+        it('Verify that Diary page has "Total Hours Spent', () => {
+            expect(DiaryPage.statTotalHoursSpent.getText()).toEqual(diaryPage.statTotalHoursSpent);
+        });
+
+        it('Verify that Diary page "Total Hours Spent" field has quantity', () => {
+            expect(DiaryPage.statTotalHoursSpent.isDisplayed()).toEqual(true);
+        });
+
+        it('Verify that Diary page "Total Hours Spent" field quantity != 0', () => {
+            expect(DiaryPage.statTotalHoursSpentCount.getText()).toEqual(digits.zeroText);
+        });
+
+
+
         xit('##### Verify that Diary page "Total Diaries" field quantity != 0', () => {
             expect(DiaryPage.statTodayDailyReportCount.getValue()).toEqual(digits.digit);
         });
+
+
+
+        it('Verify that Create button is present on Diary page', () => {
+           expect(DiaryPage.createReportBtnDairyPage.isDisplayed()).toEqual(true);
+        });
+
+        it('Verify that Create button = "Create day report" on Diary page', () => {
+            expect(DiaryPage.createReportBtnDairyPage.getText()).toEqual(diaryPage.createBtn);
+        });
+
+        it('Verify that Create button is clickable on Diary page', () => {
+            expect(DiaryPage.createReportBtnDairyPage.isClickable()).toEqual(true);
+        });
+
+
 
     });
 });
