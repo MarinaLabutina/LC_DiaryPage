@@ -66,9 +66,28 @@ describe('VERIFY THAT DIARY PAGE FOR LEARNER', () => {
 
 
 
-        xit('##### Verify that Diary page "Total Diaries" field quantity != 0', () => {
-            expect(DiaryPage.statTodayDailyReportCount.getValue()).toEqual(digits.digit);
+
+        it('Verify that Diary page has text "Average Morale Level"', () => {
+            expect(DiaryPage.statAverageMoraleLevel.getText()).toEqual(diaryPage.statAverageMoraleLevel);
         });
+
+        it('Verify that Diary page "Average Morale Level" field is present', () => {
+            expect(DiaryPage.statAverageMoraleLevel.isDisplayed()).toEqual(true);
+        });
+
+        it('Verify that Diary page "Average Morale Level" quantity field is present', () => {
+            expect(DiaryPage.statAverageMoraleLevelCount.isDisplayed()).toEqual(true);
+        });
+
+        it('Verify that Diary page "Average Morale Level" field quantity != 0', () => {
+            expect(DiaryPage.statAverageMoraleLevelCount.getText()).toEqual(digits.zeroText);
+        });
+
+
+
+        // xit('##### Verify that Diary page "Total Diaries" field quantity != 0', () => {
+        //     expect(DiaryPage.statTodayDailyReportCount.getValue()).toEqual(digits.digit);
+        // });
 
 
 
