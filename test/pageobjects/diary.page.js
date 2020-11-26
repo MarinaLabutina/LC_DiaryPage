@@ -52,6 +52,18 @@ class DiaryPage extends BasePage {
     return $$('.mr-2.small');
   }
 
+  get btn3Dots() {
+    return $$('.ant-dropdown-trigger')[1];
+  }
+
+  get btn3dotsArray() {
+    return $$("li[role='menuitem']");
+  }
+
+  get approveBtn3Dots() {
+    return $$("li[role='menuitem']")[0];
+  }
+
   open() {
     super.open('/diary');
   }
@@ -75,6 +87,16 @@ class DiaryPage extends BasePage {
 
     sortedArr = sortedArr.sort((a, b) => b - a);
     return newArr.join('') === sortedArr.join('');
+  }
+
+  getValueOfArray(array){
+    let arr = [];
+    let x;
+    for (let i = 0; i < array.length; i++) {
+      x = array[i].getText();
+      arr.push(x);
+    }
+    return arr.join(', ')
   }
 }
 
