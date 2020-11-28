@@ -64,6 +64,18 @@ class DiaryPage extends BasePage {
     return $$("li[role='menuitem']")[0];
   }
 
+  get list3Dots() {
+    return $('.ant-dropdown-menu-vertical');
+  }
+
+  get lineReportHours() {
+    return $('.ant-progress-bg');
+  }
+
+  get quantityHoursOfReport(){
+    return $('.ant-progress-text');
+  }
+
   open() {
     super.open('/diary');
   }
@@ -89,15 +101,36 @@ class DiaryPage extends BasePage {
     return newArr.join('') === sortedArr.join('');
   }
 
-  getValueOfArray(array){
+  getValueOfArray(array) {
     let arr = [];
     let x;
     for (let i = 0; i < array.length; i++) {
       x = array[i].getText();
       arr.push(x);
     }
-    return arr.join(', ')
+    return arr.join(', ');
   }
+
+
+  widthHoursLine(str, hour){
+
+    let arr = str.split(" ");
+    let valueLength = +arr[1].slice(0,2)
+    let width;
+    hour = + hour[0]
+
+    switch(hour) {
+      case 1: width = 16; break;
+      case 2: width = 33; break;
+      case 3: width = 50;  break;
+      case 4: width = 66; break;
+      case 5: width = 83; break;
+      default: width = 100;
+    }
+    return width === valueLength;
+  }
+
+
 }
 
 export default new DiaryPage();

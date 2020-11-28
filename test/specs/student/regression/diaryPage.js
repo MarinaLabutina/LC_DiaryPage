@@ -99,18 +99,29 @@ describe('VERIFY THAT DIARY PAGE FOR STUDENT ROLE', () => {
   describe('VERIFY THAT VALUE OF ELEMENTS  ARE CORRECT ON DIARY PAGE', function () {
     it('TC-85 Verify that each reports has its text and its similar to the last report', function () {
       // lets finish later
+      // needs function
+    });
+
+    it('TC- 87 Verify that all reports after 14th November s displays the name of producer', function () {
+      //needs function
+    });
+
+    it('TC-89 Verify that the line totally colored with 6 and more hours', function () {
+      expect(DiaryPage.lineReportHours.isDisplayed()).toEqual(true);
+    });
+
+    it('TC-89.1 Verify that the line totally colored with 6 and more hours', function () {
+      expect(DiaryPage.widthHoursLine(DiaryPage.lineReportHours.getAttribute('style'), DiaryPage.quantityHoursOfReport)).toEqual(true);
     });
 
     it('TC-90 Verify that report has btn with 3 dots vertical (…)', function () {
-      expect(DiaryPage.btn3Dots.isDisplayed());
+      expect(DiaryPage.btn3Dots.isDisplayed()).toEqual(true);
     });
 
     it('TC-91 Verify that if you click on 3 dots in the last report pop up shows list of 3 btns: Approve, Edit and Delete" ', function () {
       DiaryPage.btn3Dots.moveTo();
-      //browser.pause(WaitTimes.WAIT_TIME_SHORT);
-      $('.ant-dropdown-menu-vertical').waitForDisplayed();
+      DiaryPage.list3Dots.waitForDisplayed();
       expect(DiaryPage.getValueOfArray(DiaryPage.btn3dotsArray)).toEqual(diaryPage.array3dots);
     });
-
   });
 });
