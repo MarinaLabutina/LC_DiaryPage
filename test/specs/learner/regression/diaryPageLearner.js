@@ -24,8 +24,14 @@ describe('VERIFY THAT DIARY PAGE FOR LEARNER', () => {
             expect(DiaryPage.headerDiaryPage.getText()).toEqual(diaryPage.header);
         });
 
-        it('Verify that Diary page has "Total Diaries" field', () => {
+
+
+        it('Verify that Diary page has field with text "Total Diaries"', () => {
            expect(DiaryPage.statTotalDiaries.getText()).toEqual(diaryPage.statTotalDiaries);
+        });
+
+        it('Verify that Diary page "Total Diaries" field is present', () => {
+            expect(DiaryPage.statTotalDiaries.isDisplayed()).toEqual(true);
         });
 
         it('Verify that Diary page "Total Diaries" field has quantity', () => {
@@ -38,36 +44,43 @@ describe('VERIFY THAT DIARY PAGE FOR LEARNER', () => {
 
 
 
-        it('Verify that Diary page has "Today Daily Reports', () => {
+        it('Verify that Diary page has field with text "Today Daily Reports"', () => {
             expect(DiaryPage.statTodayDailyReport.getText()).toEqual(diaryPage.statTodayDailyReport);
         });
 
-        it('Verify that Diary page "Today Daily Reports" field has quantity', () => {
+        it('Verify that Diary page "Today Daily Reports" field is present', () => {
             expect(DiaryPage.statTodayDailyReport.isDisplayed()).toEqual(true);
         });
 
+        it('Verify that Diary page "Today Daily Reports" field has quantity', () => {
+            expect(DiaryPage.statTodayDailyReportCount.isDisplayed()).toEqual(true);
+        });
+
         it('Verify that Diary page "Today Daily Reports" field quantity != 0', () => {
-            expect(DiaryPage.statTodayDailyReportCount.getText()).toEqual(digits.zeroText);
+            expect(DiaryPage.statTodayDailyReportCount.getValue()).not.toEqual(digits.zero);
         });
 
 
 
-        it('Verify that Diary page has "Total Hours Spent', () => {
+        it('Verify that Diary page has field with text "Total Hours Spent"', () => {
             expect(DiaryPage.statTotalHoursSpent.getText()).toEqual(diaryPage.statTotalHoursSpent);
         });
 
-        it('Verify that Diary page "Total Hours Spent" field has quantity', () => {
+        it('Verify that Diary page "Total Hours Spent" field is present', () => {
             expect(DiaryPage.statTotalHoursSpent.isDisplayed()).toEqual(true);
         });
 
+        it('Verify that Diary page "Total Hours Spent" field has quantity', () => {
+            expect(DiaryPage.statTotalHoursSpentCount.isDisplayed()).toEqual(true);
+        });
+
         it('Verify that Diary page "Total Hours Spent" field quantity != 0', () => {
-            expect(DiaryPage.statTotalHoursSpentCount.getText()).toEqual(digits.zeroText);
+            expect(DiaryPage.statTotalHoursSpentCount.getValue()).not.toEqual(digits.zero);
         });
 
 
 
-
-        it('Verify that Diary page has text "Average Morale Level"', () => {
+        it('Verify that Diary page has field with text "Average Morale Level"', () => {
             expect(DiaryPage.statAverageMoraleLevel.getText()).toEqual(diaryPage.statAverageMoraleLevel);
         });
 
@@ -75,19 +88,13 @@ describe('VERIFY THAT DIARY PAGE FOR LEARNER', () => {
             expect(DiaryPage.statAverageMoraleLevel.isDisplayed()).toEqual(true);
         });
 
-        it('Verify that Diary page "Average Morale Level" quantity field is present', () => {
+        it('Verify that Diary page "Average Morale Level" field has quantity', () => {
             expect(DiaryPage.statAverageMoraleLevelCount.isDisplayed()).toEqual(true);
         });
 
         it('Verify that Diary page "Average Morale Level" field quantity != 0', () => {
-            expect(DiaryPage.statAverageMoraleLevelCount.getText()).toEqual(digits.zeroText);
+            expect(DiaryPage.statAverageMoraleLevelCount.getValue()).not.toEqual(digits.zero);
         });
-
-
-
-        // xit('##### Verify that Diary page "Total Diaries" field quantity != 0', () => {
-        //     expect(DiaryPage.statTodayDailyReportCount.getValue()).toEqual(digits.digit);
-        // });
 
 
 
@@ -102,8 +109,5 @@ describe('VERIFY THAT DIARY PAGE FOR LEARNER', () => {
         it('Verify that Create button is clickable on Diary page', () => {
             expect(DiaryPage.createReportBtnDairyPage.isClickable()).toEqual(true);
         });
-
-
-
     });
 });
