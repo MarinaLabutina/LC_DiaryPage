@@ -40,6 +40,8 @@ const drawerMenu = {
   jobOffer: 'Got a job offer',
 };
 
+
+
 const digits = {
   zero: 0,
   ten: 10,
