@@ -4,6 +4,8 @@ import ProfilePage from '../../../pageobjects/profile.page';
 import { profilePage, diaryPage, digits } from '../../../../data/expected.data';
 import DiaryPage from '../../../pageobjects/diary.page';
 import WaitTimes from '../../../../data/waitTimes';
+//import {randomDataCreateDailyReport} from '../../../../data/randomData';
+import CreateDayReport from '../../../pageobjects/createDayReport.page';
 
 describe('VERIFY THAT DIARY PAGE FOR STUDENT ROLE', () => {
   before(() => {
@@ -13,9 +15,9 @@ describe('VERIFY THAT DIARY PAGE FOR STUDENT ROLE', () => {
     LoginPage.login(user.student.email, user.student.password);
     ProfilePage.createReportBtn.waitForDisplayed();
     ProfilePage.topMenuDiary.click();
+    DiaryPage.open();
   });
-
-  describe('VERIFY THAT MAIN ELEMENTS PRESENT ON DIARY PAGE', function () {
+  xdescribe('VERIFY THAT MAIN ELEMENTS PRESENT ON DIARY PAGE', function () {
     it('TC-75 Verify that url for Dairy page is https://stage.localcoding.us/diary', function () {
       expect(browser.getUrl()).toEqual(diaryPage.diaryUrl);
     });
@@ -96,7 +98,7 @@ describe('VERIFY THAT DIARY PAGE FOR STUDENT ROLE', () => {
     });
   });
 
-  describe('VERIFY THAT VALUE OF ELEMENTS  ARE CORRECT ON DIARY PAGE', function () {
+  xdescribe('VERIFY THAT VALUE OF ELEMENTS  ARE CORRECT ON DIARY PAGE', function () {
     it('TC-85 Verify that each reports has its text and its similar to the last report', function () {
       // lets finish later
       // needs function
@@ -111,7 +113,9 @@ describe('VERIFY THAT DIARY PAGE FOR STUDENT ROLE', () => {
     });
 
     it('TC-89.1 Verify that the line totally colored with 6 and more hours', function () {
-      expect(DiaryPage.widthHoursLine(DiaryPage.lineReportHours.getAttribute('style'), DiaryPage.quantityHoursOfReport)).toEqual(true);
+      expect(DiaryPage.widthHoursLine(DiaryPage.lineReportHours.getAttribute('style'), DiaryPage.quantityHoursOfReport)).toEqual(
+        true,
+      );
     });
 
     it('TC-90 Verify that report has btn with 3 dots vertical (…)', function () {
@@ -122,6 +126,15 @@ describe('VERIFY THAT DIARY PAGE FOR STUDENT ROLE', () => {
       DiaryPage.btn3Dots.moveTo();
       DiaryPage.list3Dots.waitForDisplayed();
       expect(DiaryPage.getValueOfArray(DiaryPage.btn3dotsArray)).toEqual(diaryPage.array3dots);
+    });
+  });
+
+  describe('ДЛЯ ПРОВЕРКИ ФУНКЦИИ CREATE DAY REPORT', () => {
+    it('should function "createDailyReport()" works', function () {
+      console.log('++++++++++++++++++++++++++++++++++');
+      console.log(CreateDayReport.createDailyReport());
+      console.log('++++++++++++++++++++++++++++++++++');
+      // expect(CreateDayReport.createDailyReport()).toEqual("Fine");
     });
   });
 });

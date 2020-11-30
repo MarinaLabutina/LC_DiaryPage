@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="file://$PROJECT_DIR$" libraries="{LC_Project_01_new/node_modules}" />
-    <file url="PROJECT" libraries="{@types/chai, @types/mocha, LC_Project_01_new/node_modules}" />
+    <file url="file://$PROJECT_DIR$" libraries="{LC_Project_02/node_modules}" />
+    <file url="PROJECT" libraries="{@types/7zip-min, @types/chai, @types/mocha, @types/node, LC_Project_02/node_modules}" />
     <includedPredefinedLibrary name="HTTP Response Handler" />
     <includedPredefinedLibrary name="Node.js Core" />
   </component>
